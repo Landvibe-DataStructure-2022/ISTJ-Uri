@@ -2,9 +2,11 @@
 #include <string>
 using namespace std;
 
-int stack[10001];
+int stack[10];
 int stackSize = 0;
 int t;
+
+
 
 bool empty() {
 	if (stackSize == 0) {
@@ -19,7 +21,7 @@ void top() {
 }
 
 void push(int x) {
-	if (stackSize >=t) cout << "FULL" << "\n";
+	if (stackSize >= t) cout << "FULL" << "\n";
 	else {
 		stack[stackSize] = x;
 		stackSize++;
@@ -29,7 +31,7 @@ void push(int x) {
 void pop() {
 	if (empty()) { cout << -1 << "\n"; }
 	else {
-		cout << stack[stackSize-1] << "\n";
+		cout << stack[stackSize - 1] << "\n";
 		stackSize--;
 	}
 }
@@ -59,6 +61,7 @@ int main() {
 		else if (s == "pop") {
 			pop();
 		}
+		
 	}
 
 
